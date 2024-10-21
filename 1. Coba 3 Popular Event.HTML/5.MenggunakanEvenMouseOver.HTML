@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover dan Mouseout</title>
+    <style>
+        /* Gaya untuk elemen div */
+        #myDiv {
+            width: 200px;
+            height: 200px;
+            background-color: blue; /* Warna awal */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
+            transition: background-color 0.3s; /* Transisi warna */
+        }
+    </style>
+</head>
+<body>
+
+<div id="myDiv">Hover Me!</div>
+
+<script>
+    // Mendapatkan elemen div
+    const myDiv = document.getElementById('myDiv');
+
+    // Menambahkan event listener untuk mouseover
+    myDiv.addEventListener('mouseover', function() {
+        myDiv.style.backgroundColor = 'red'; // Ubah warna saat mouse berada di atas
+    });
+
+    // Menambahkan event listener untuk mouseout
+    myDiv.addEventListener('mouseout', function() {
+        myDiv.style.backgroundColor = 'blue'; // Kembalikan warna saat mouse keluar
+    });
+</script>
+
+</body>
+</html>

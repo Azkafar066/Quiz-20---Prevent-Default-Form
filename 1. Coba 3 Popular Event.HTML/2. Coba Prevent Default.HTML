@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default Example</title>
+</head>
+<body>
+    <!-- Link that we will prevent from working -->
+    <a href="https://www.example.com" id="myLink">Go to Example.com</a>
+
+    <script>
+        // Add event listener to the link to prevent its default action
+        document.getElementById("myLink").addEventListener("click", function(event) {
+            event.preventDefault(); // This prevents the link from navigating
+            alert("Link click prevented!");
+        });
+    </script>    
+</body>
+</html>
